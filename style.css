@@ -214,12 +214,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: 40px;
 }
 .hero-photo-wrap { flex-shrink: 0; }
 .hero-photo {
   position: relative;
-  width: 200px; height: 200px;
+  width: 270px; height: 340px;
 }
 .photo-placeholder {
   width: 100%; height: 100%;
@@ -230,6 +230,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .photo-ring {
   position: absolute;
