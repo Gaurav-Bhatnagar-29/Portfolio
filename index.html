@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaurav Bhatnagar – CSE Student & Data Science Enthusiast</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">GB<span class="dot">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i data-lucide="sun" class="icon-sun"></i>
+        <i data-lucide="moon" class="icon-moon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg-orb orb1"></div>
+  <div class="hero-bg-orb orb2"></div>
+  <div class="hero-bg-orb orb3"></div>
+  <div class="hero-content">
+    <div class="hero-photo-wrap reveal">
+      <div class="hero-photo">
+        <div class="photo-placeholder">
+          <img src="Gauravpic.png" alt="Gaurav Bhatnagar" style="width:100%;height:100%;object-fit:cover;border-radius:50%" />
+        </div>
+        <div class="photo-ring"></div>
+      </div>
+    </div>
+    <div class="hero-text">
+      <p class="hero-greeting reveal delay-1">👋 Hello, I'm</p>
+      <h1 class="hero-name reveal delay-2">Gaurav<br/>Bhatnagar</h1>
+      <p class="hero-title reveal delay-3">
+        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-bio reveal delay-4">
+        Computer Science student passionate about Data Science, Technology, and Software Development, focused on building intelligent, scalable, and data-driven solutions that turn complex data into actionable insights.
+      </p>
+      <div class="hero-btns reveal delay-5">
+        <a href="Gaurav_Bhatnagar_Resume.pdf" download class="btn btn-primary">
+          <i data-lucide="download"></i> Download Resume
+        </a>
+        <a href="#projects" class="btn btn-outline">
+          <i data-lucide="folder-open"></i> View Projects
+        </a>
+      </div>
+      <div class="hero-socials reveal delay-6">
+        <a href="https://github.com/Gaurav-Bhatnagar-29" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/gauravbhatnagar29" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="mailto:gauravbhatnagar2500@gmail.com" class="social-link" aria-label="Email">
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <i data-lucide="chevrons-down"></i>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-label reveal">About Me</div>
+    <h2 class="section-title reveal delay-1">Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text reveal delay-2">
+        <p>I am a third-year B.Tech Computer Science student at <strong>Lovely Professional University</strong> with a strong interest in Data Science, Machine Learning, and Software Development, aiming to develop data-driven and scalable software solutions.</p>
+        <p>I enjoy analyzing data, building predictive models, and developing solutions that solve real-world problems. I am continuously improving my technical skills through projects, certifications, and hands-on learning.</p>
+        <blockquote class="career-goal">
+          <i data-lucide="target"></i>
+          Aspiring Data Scientist focused on Machine Learning, Data Analytics, Intelligent Systems, and Software Development — driven to create impactful, data-driven solutions.
+        </blockquote>
+      </div>
+      <div class="about-cards reveal delay-3">
+        <div class="info-card">
+          <i data-lucide="graduation-cap"></i>
+          <div>
+            <span class="info-label">University</span>
+            <span class="info-value">Lovely Professional University</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <i data-lucide="book-open"></i>
+          <div>
+            <span class="info-label">Degree</span>
+            <span class="info-value">B.Tech – CSE</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <i data-lucide="calendar"></i>
+          <div>
+            <span class="info-label">Year</span>
+            <span class="info-value">3rd Year (Since Aug 2023)</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <i data-lucide="star"></i>
+          <div>
+            <span class="info-label">CGPA</span>
+            <span class="info-value">8.17 / 10</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <i data-lucide="map-pin"></i>
+          <div>
+            <span class="info-label">Location</span>
+            <span class="info-value">Punjab, India</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <i data-lucide="heart"></i>
+          <div>
+            <span class="info-label">Hobbies</span>
+            <span class="info-value">Sports &amp; Cinema</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <div class="section-label reveal">Skills</div>
+    <h2 class="section-title reveal delay-1">What I Work With</h2>
+    <div class="skills-grid">
+      <div class="skill-group reveal delay-2">
+        <h3 class="skill-group-title"><i data-lucide="code-2"></i> Programming Languages</h3>
+        <div class="skill-badges">
+          <span class="badge badge-blue">Java</span>
+          <span class="badge badge-blue">C++</span>
+          <span class="badge badge-blue">Python</span>
+          <span class="badge badge-blue">MySQL</span>
+          <span class="badge badge-blue">Kotlin</span>
+        </div>
+      </div>
+      <div class="skill-group reveal delay-3">
+        <h3 class="skill-group-title"><i data-lucide="wrench"></i> Tools &amp; Platforms</h3>
+        <div class="skill-badges">
+          <span class="badge badge-green">Git</span>
+          <span class="badge badge-green">GitHub</span>
+          <span class="badge badge-green">VS Code</span>
+          <span class="badge badge-green">Power BI</span>
+          <span class="badge badge-green">Android Studio</span>
+          <span class="badge badge-green">MS Office</span>
+        </div>
+      </div>
+      <div class="skill-group reveal delay-4">
+        <h3 class="skill-group-title"><i data-lucide="users"></i> Soft Skills</h3>
+        <div class="skill-badges">
+          <span class="badge badge-amber">Problem Solving</span>
+          <span class="badge badge-amber">Team Leadership</span>
+          <span class="badge badge-amber">Teamwork</span>
+          <span class="badge badge-amber">Adaptability</span>
+          <span class="badge badge-amber">Communication</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-label reveal">Projects</div>
+    <h2 class="section-title reveal delay-1">Things I've Built</h2>
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card reveal delay-2">
+        <div class="project-img-placeholder">
+          <i data-lucide="bar-chart-2"></i>
+          <span>Employee Attrition Prediction</span>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-date"><i data-lucide="calendar"></i> Jun – Jul 2025</span>
+          </div>
+          <h3 class="project-title">Employee Attrition Prediction using ML</h3>
+          <p class="project-desc">End-to-end employee attrition prediction system using Python and machine learning to analyze workforce patterns and identify factors influencing attrition.</p>
+          <ul class="project-highlights">
+            <li>Data preprocessing &amp; feature engineering</li>
+            <li>Logistic Regression &amp; Decision Tree models</li>
+            <li>Model performance comparison</li>
+            <li>HR analytics insights</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Pandas</span>
+            <span class="tech-badge">NumPy</span>
+            <span class="tech-badge">Scikit-learn</span>
+            <span class="tech-badge">Matplotlib</span>
+            <span class="tech-badge">Seaborn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Gaurav-Bhatnagar-29" target="_blank" class="project-btn">
+              <i data-lucide="github"></i> GitHub
+            </a>
+            <a href="#" class="project-btn project-btn-demo">
+              <i data-lucide="external-link"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card reveal delay-3">
+        <div class="project-img-placeholder" style="--ph-color: #e15f41;">
+          <i data-lucide="activity"></i>
+          <span>COVID-19 Mortality Analysis</span>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-date"><i data-lucide="calendar"></i> Mar – May 2025</span>
+          </div>
+          <h3 class="project-title">COVID-19 Mortality Trends in the U.S.</h3>
+          <p class="project-desc">Analyzed nationwide COVID-19 mortality data from Data.gov to identify trends across demographics and states using advanced visualization techniques.</p>
+          <ul class="project-highlights">
+            <li>Data cleaning and transformation</li>
+            <li>Mortality trend analysis</li>
+            <li>State-wise comparisons</li>
+            <li>Rich data visualization</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Pandas</span>
+            <span class="tech-badge">NumPy</span>
+            <span class="tech-badge">Matplotlib</span>
+            <span class="tech-badge">Seaborn</span>
+            <span class="tech-badge">Jupyter</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Gaurav-Bhatnagar-29" target="_blank" class="project-btn">
+              <i data-lucide="github"></i> GitHub
+            </a>
+            <a href="#" class="project-btn project-btn-demo">
+              <i data-lucide="external-link"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card reveal delay-4">
+        <div class="project-img-placeholder" style="--ph-color: #1db954;">
+          <i data-lucide="music"></i>
+          <span>Spotify Listening Analysis</span>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-date"><i data-lucide="calendar"></i> Jan – Feb 2025</span>
+          </div>
+          <h3 class="project-title">Spotify Listening Analysis</h3>
+          <p class="project-desc">Exploratory analysis on Spotify listening history to uncover patterns in music consumption using Excel-powered data transformation and visualization.</p>
+          <ul class="project-highlights">
+            <li>Data cleaning using Excel</li>
+            <li>Pivot tables and aggregation</li>
+            <li>Interactive charts and insights</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-badge">Excel</span>
+            <span class="tech-badge">Data Visualization</span>
+            <span class="tech-badge">Analytics</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Gaurav-Bhatnagar-29" target="_blank" class="project-btn">
+              <i data-lucide="github"></i> GitHub
+            </a>
+            <a href="#" class="project-btn project-btn-demo">
+              <i data-lucide="external-link"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section section-alt" id="experience">
+  <div class="container">
+    <div class="section-label reveal">Experience</div>
+    <h2 class="section-title reveal delay-1">Training &amp; Internships</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal delay-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-title">Data Science with Machine Learning</h3>
+              <p class="timeline-org">Cipher Schools</p>
+            </div>
+            <span class="timeline-date">Jun – Jul 2025</span>
+          </div>
+          <ul class="timeline-list">
+            <li>Worked with Excel for data cleaning and dashboards</li>
+            <li>Used Python for data analysis and exploratory tasks</li>
+            <li>Built end-to-end machine learning workflows</li>
+            <li>Worked with Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn</li>
+          </ul>
+          <div class="timeline-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Excel</span>
+            <span class="tech-badge">Scikit-Learn</span>
+            <span class="tech-badge">ML</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="section" id="education">
+  <div class="container">
+    <div class="section-label reveal">Education</div>
+    <h2 class="section-title reveal delay-1">Academic Background</h2>
+    <div class="edu-grid">
+      <div class="edu-card reveal delay-2">
+        <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
+        <div class="edu-body">
+          <h3>Lovely Professional University</h3>
+          <p class="edu-degree">B.Tech – Computer Science and Engineering</p>
+          <div class="edu-meta">
+            <span><i data-lucide="calendar"></i> Aug 2023 – Present</span>
+            <span class="edu-grade">CGPA: 8.17</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-card reveal delay-3">
+        <div class="edu-icon"><i data-lucide="book"></i></div>
+        <div class="edu-body">
+          <h3>Central Academy</h3>
+          <p class="edu-degree">Intermediate (12th)</p>
+          <div class="edu-meta">
+            <span><i data-lucide="calendar"></i> 2021 – 2023</span>
+            <span class="edu-grade">78.2%</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-card reveal delay-4">
+        <div class="edu-icon"><i data-lucide="book"></i></div>
+        <div class="edu-body">
+          <h3>Central Academy</h3>
+          <p class="edu-degree">Matriculation (10th)</p>
+          <div class="edu-meta">
+            <span><i data-lucide="calendar"></i> 2020 – 2021</span>
+            <span class="edu-grade">75.6%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="section section-alt" id="certifications">
+  <div class="container">
+    <div class="section-label reveal">Certifications</div>
+    <h2 class="section-title reveal delay-1">Verified Credentials</h2>
+    <div class="cert-grid">
+      <div class="cert-card reveal delay-2">
+        <div class="cert-badge"><i data-lucide="award"></i></div>
+        <div class="cert-body">
+          <h3>Cloud Computing</h3>
+          <p class="cert-issuer">NPTEL – IIT Kharagpur</p>
+          <span class="cert-date">November 2025</span>
+        </div>
+      </div>
+      <div class="cert-card reveal delay-3">
+        <div class="cert-badge"><i data-lucide="award"></i></div>
+        <div class="cert-body">
+          <h3>The Bits and Bytes of Computer Networking</h3>
+          <p class="cert-issuer">Google – Coursera</p>
+          <span class="cert-date">September 2024</span>
+        </div>
+      </div>
+      <div class="cert-card reveal delay-4">
+        <div class="cert-badge"><i data-lucide="award"></i></div>
+        <div class="cert-body">
+          <h3>Introduction to Hardware and Operating Systems</h3>
+          <p class="cert-issuer">IBM – Coursera</p>
+          <span class="cert-date">September 2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="section" id="achievements">
+  <div class="container">
+    <div class="section-label reveal">Achievements</div>
+    <h2 class="section-title reveal delay-1">Highlights &amp; Awards</h2>
+    <div class="achieve-grid">
+      <div class="achieve-card placeholder-card reveal delay-2">
+        <i data-lucide="zap"></i>
+        <h3>Hackathons</h3>
+        <p>Add your hackathon participations and wins here.</p>
+      </div>
+      <div class="achieve-card placeholder-card reveal delay-3">
+        <i data-lucide="code"></i>
+        <h3>Coding Competitions</h3>
+        <p>Add competitive programming results and rankings here.</p>
+      </div>
+      <div class="achieve-card placeholder-card reveal delay-4">
+        <i data-lucide="star"></i>
+        <h3>Academic Achievements</h3>
+        <p>Dean's List, scholarships, honors — add them here.</p>
+      </div>
+      <div class="achieve-card placeholder-card reveal delay-5">
+        <i data-lucide="trophy"></i>
+        <h3>Scholarships</h3>
+        <p>Add any scholarships or awards received here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPEN SOURCE ============ -->
+<section class="section section-alt" id="opensource">
+  <div class="container">
+    <div class="section-label reveal">Open Source</div>
+    <h2 class="section-title reveal delay-1">GitHub Activity</h2>
+    <div class="github-section reveal delay-2">
+      <div class="github-profile-card">
+        <div class="gh-avatar"><i data-lucide="github"></i></div>
+        <div class="gh-info">
+          <h3>Gaurav-Bhatnagar-29</h3>
+          <a href="https://github.com/Gaurav-Bhatnagar-29" target="_blank" rel="noopener" class="gh-link">
+            github.com/Gaurav-Bhatnagar-29 <i data-lucide="external-link"></i>
+          </a>
+        </div>
+        <div class="gh-stats">
+          <div class="gh-stat">
+            <span class="gh-stat-num" id="repoCount">—</span>
+            <span class="gh-stat-label">Repositories</span>
+          </div>
+          <div class="gh-stat">
+            <span class="gh-stat-num" id="starCount">—</span>
+            <span class="gh-stat-label">Stars</span>
+          </div>
+          <div class="gh-stat">
+            <span class="gh-stat-num" id="followerCount">—</span>
+            <span class="gh-stat-label">Followers</span>
+          </div>
+        </div>
+      </div>
+      <div class="gh-repos" id="ghRepos">
+        <div class="gh-repo-placeholder">
+          <i data-lucide="folder-git-2"></i>
+          <p>Repositories will load here.</p>
+          <a href="https://github.com/Gaurav-Bhatnagar-29" target="_blank" class="btn btn-outline" style="margin-top:1rem">Visit GitHub Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-label reveal">Contact</div>
+    <h2 class="section-title reveal delay-1">Let's Connect</h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal delay-2">
+        <p class="contact-intro">Have an opportunity, project idea, or just want to say hi? I'd love to hear from you.</p>
+        <div class="contact-links">
+          <a href="mailto:gauravbhatnagar2500@gmail.com" class="contact-item">
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
+            <div>
+              <span class="contact-item-label">Email</span>
+              <span class="contact-item-value">gauravbhatnagar2500@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/gauravbhatnagar29" target="_blank" class="contact-item">
+            <div class="contact-icon"><i data-lucide="linkedin"></i></div>
+            <div>
+              <span class="contact-item-label">LinkedIn</span>
+              <span class="contact-item-value">linkedin.com/in/gauravbhatnagar29</span>
+            </div>
+          </a>
+          <a href="https://github.com/Gaurav-Bhatnagar-29" target="_blank" class="contact-item">
+            <div class="contact-icon"><i data-lucide="github"></i></div>
+            <div>
+              <span class="contact-item-label">GitHub</span>
+              <span class="contact-item-value">github.com/Gaurav-Bhatnagar-29</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+            <div>
+              <span class="contact-item-label">Location</span>
+              <span class="contact-item-value">Punjab, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal delay-3" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">
+          <i data-lucide="send"></i> Send Message
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Gaurav Bhatnagar. Crafted with ❤️ and a lot of data.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Gaurav-Bhatnagar-29" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/gauravbhatnagar29" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="mailto:gauravbhatnagar2500@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i data-lucide="arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
