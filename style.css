@@ -890,6 +890,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .gh-repo-placeholder p { font-size: 0.9rem; }
 /* Contribution Graph */
 .os-contrib {
+  margin-top: 22px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r);
