@@ -164,17 +164,41 @@ function initBackToTop() {
 // ---- GitHub Stats ----
 async function fetchGitHub() {
   const username = 'Gaurav-Bhatnagar-29';
-  try {
-    const res = await fetch(`https://api.github.com/users/${username}`);
-    if (!res.ok) return;
-    const data = await res.json();
+  const maxRetries = 3;
+  let attempt = 0;
 
-    document.getElementById('repoCount').textContent = data.public_repos ?? '—';
-    document.getElementById('followerCount').textContent = data.followers ?? '—';
+  while (attempt < maxRetries) {
+    try {
+      // Fetch user data
+      const userRes = await fetch(`https://api.github.com/users/${username}`, {
+        headers: { 'User-Agent': 'Portfolio-Site' }
+      });
+      if (!userRes.ok) {
+        if (userRes.status === 403) {
+          // Rate limited, wait and retry
+          await new Promise(resolve => setTimeout(resolve, 1000 * (attempt + 1)));
+          attempt++;
+          continue;
+        }
+        throw new Error(`User API failed: ${userRes.status}`);
+      }
+      const userData = await userRes.json();
 
-    // Fetch repos for star count
-    const reposRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
-    if (reposRes.ok) {
+      document.getElementById('repoCount').textContent = userData.public_repos ?? '—';
+      document.getElementById('followerCount').textContent = userData.followers ?? '—';
+
+      // Fetch repos
+      const reposRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
+        headers: { 'User-Agent': 'Portfolio-Site' }
+      });
+      if (!reposRes.ok) {
+        if (reposRes.status === 403) {
+          await new Promise(resolve => setTimeout(resolve, 1000 * (attempt + 1)));
+          attempt++;
+          continue;
+        }
+        throw new Error(`Repos API failed: ${reposRes.status}`);
+      }
       const repos = await reposRes.json();
       const stars = repos.reduce((acc, r) => acc + (r.stargazers_count || 0), 0);
       document.getElementById('starCount').textContent = stars;
@@ -206,9 +230,27 @@ async function fetchGitHub() {
           </a>`).join('')}
         </div>`;
       }
+      return; // Success, exit
+    } catch (err) {
+      console.log(`GitHub API attempt ${attempt + 1} failed:`, err.message);
+      attempt++;
+      if (attempt < maxRetries) {
+        await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+      }
     }
-  } catch (err) {
-    // Silently fail — show placeholder
-    console.log('GitHub API unavailable:', err.message);
   }
+
+  // All retries failed, show error message
+  document.getElementById('repoCount').textContent = 'N/A';
+  document.getElementById('followerCount').textContent = 'N/A';
+  document.getElementById('starCount').textContent = 'N/A';
+  const container = document.getElementById('ghRepos');
+  container.innerHTML = `
+    <div class="gh-repo-placeholder">
+      <i data-lucide="alert-triangle"></i>
+      <p>Unable to load GitHub data. Please check back later.</p>
+      <a href="https://github.com/Gaurav-Bhatnagar-29" target="_blank" class="btn btn-outline" style="margin-top:1rem">Visit GitHub Profile</a>
+    </div>
+  `;
+  if (window.lucide) lucide.createIcons();
 }
