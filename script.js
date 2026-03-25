@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) lucide.createIcons();
   initTheme();
+  initCVViewer();
   initNavbar();
   initTyped();
   initReveal();
@@ -24,6 +25,41 @@ function initTheme() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  });
+}
+
+// ---- CV Viewer ----
+function initCVViewer() {
+  const cvViewer = document.getElementById('cvViewer');
+  const cvModal = document.getElementById('cvModal');
+  const cvModalOverlay = document.getElementById('cvModalOverlay');
+  const cvModalClose = document.getElementById('cvModalClose');
+
+  cvViewer.addEventListener('click', () => {
+    cvModal.classList.add('active');
+    cvModalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (window.lucide) lucide.createIcons();
+  });
+
+  cvModalClose.addEventListener('click', () => {
+    cvModal.classList.remove('active');
+    cvModalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  cvModalOverlay.addEventListener('click', () => {
+    cvModal.classList.remove('active');
+    cvModalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && cvModal.classList.contains('active')) {
+      cvModal.classList.remove('active');
+      cvModalOverlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
   });
 }
 

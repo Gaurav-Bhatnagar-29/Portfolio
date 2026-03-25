@@ -28,6 +28,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
+      <button class="cv-viewer" id="cvViewer" aria-label="View CV">CV</button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <i data-lucide="sun" class="icon-sun"></i>
         <i data-lucide="moon" class="icon-moon"></i>
@@ -561,6 +562,17 @@ Applied machine learning techniques to solve real-world problems through hands-o
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
   <i data-lucide="arrow-up"></i>
 </button>
+
+<!-- CV Modal -->
+<div class="cv-modal" id="cvModal">
+  <div class="cv-modal-content">
+    <button class="cv-modal-close" id="cvModalClose" aria-label="Close CV viewer">
+      <i data-lucide="x"></i>
+    </button>
+    <iframe id="cvIframe" src="Gaurav_Bhatnagar_Resume.pdf" class="cv-iframe"></iframe>
+  </div>
+</div>
+<div class="cv-modal-overlay" id="cvModalOverlay"></div>
 
 <script src="script.js"></script>
 </body>
